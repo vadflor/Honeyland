@@ -1,0 +1,119 @@
+$step--3: clamp(1rem, calc(0.9071rem + 0.381vw), 1.25rem);
+$step-0: clamp(1.875rem, calc(1.6429rem + 0.9524vw), 2.5rem);
+
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 130.15px;
+    gap: 48px;
+
+    .logo-play {
+      // width: 129px;
+      // height: 139px;
+      width: clamp(5.813rem, 4.9773rem + 3.4286vw, 8.063rem);
+    }
+    .vertical-line {
+      border-right: 4px solid rgba(255, 255, 255, 0.21);
+      border-radius: 10px;
+      // height: 101px;
+      height: clamp(2.5rem, 1.0837rem + 5.8103vw, 6.313rem);
+      display: flex;
+    }
+    .logo-honey {
+      // width: 187.82px;
+      // height: 139px;
+      width: clamp(8.445rem, 7.2215rem + 5.0194vw, 11.739rem);
+    }
+  }
+
+  .header {
+    position: relative;
+    max-width: 572px;
+    margin: 0 auto;
+    padding-top: 54px;
+
+    .left-img {
+      position: absolute;
+      left: -430px;
+      top: 0px;
+      width: 347px;
+      height: 543px;
+    }
+    .header-middle {
+      .header-title {
+        text-align: center;
+        font-weight: 700;
+        font-size: $step-0;
+        line-height: 60px;
+
+        .thin {
+          font-weight: normal;
+          padding: 0 8px;
+        }
+      }
+      .header-text {
+        text-align: center;
+        padding: 24px 23px 0px 23px;
+        // font-size: 1.25rem;
+        font-size: $step--3;
+        line-height: 30px;
+        font-weight: 400;
+
+        .bold-underline {
+          font-weight: 700;
+          text-decoration-line: underline;
+        }
+      }
+    }
+    .right-img {
+      position: absolute;
+      top: 80px;
+      left: 650px;
+      width: 302px;
+      height: 458px;
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .content {
+    .header {
+      .left-img {
+        left: -220px;
+        width: 220px;
+        top: 120px;
+        height: auto;
+      }
+      .right-img {
+        top: 157px;
+        left: 572px;
+        width: 200px;
+        height: auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1010px) {
+  .content {
+    .header {
+      .left-img {
+        display: none;
+      }
+      .right-img {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .content {
+    .logo {
+      padding-top: 49px;
+      gap: 16px;
+    }
+  }
+}

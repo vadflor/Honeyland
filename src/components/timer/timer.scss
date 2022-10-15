@@ -1,0 +1,84 @@
+$step-0: clamp(1.875rem, calc(1.6429rem + 0.9524vw), 2.5rem);
+
+.header-counter {
+    margin-top: 96px;
+    height: 134px;
+    $first: #001635;
+    $second: #0d355a;
+    background: radial-gradient(
+          circle at 100% 100%,
+          $first 0,
+          $first 2px,
+          transparent 2px
+        )
+        0% 0%/4px 4px no-repeat,
+      radial-gradient(
+          circle at 0 100%,
+          $first 0,
+          $first 2px,
+          transparent 2px
+        )
+        100% 0%/4px 4px no-repeat,
+      radial-gradient(
+          circle at 100% 0,
+          $second 0,
+          $second 2px,
+          transparent 2px
+        )
+        0% 100%/4px 4px no-repeat,
+      radial-gradient(
+          circle at 0 0,
+          $second 0,
+          $second 2px,
+          transparent 2px
+        )
+        100% 100%/4px 4px no-repeat,
+      linear-gradient($first, $second) 50% 50% / calc(100% - 4px)
+        calc(100% - 8px) no-repeat,
+      linear-gradient($first, $second) 50% 50% / calc(100% - 8px)
+        calc(100% - 4px) no-repeat,
+      radial-gradient(at 100% 100%, #0f385e 0%, transparent 70%),
+      radial-gradient(at 100% 0%, #0f385e 0%, transparent 70%),
+      radial-gradient(at 0% 0%, #001635 0%, transparent 70%), #165d8f;
+    border-radius: 4px;
+    padding: 2px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .counter-box {
+      display: flex;
+      gap: 16px;
+
+      .counter-box-item {
+        .box-number {
+          font-family: "Motiva Sans", sans-serif;
+          font-weight: 700;
+          font-size: $step-0;
+        }
+        .box-text {
+          font-weight: 700;
+          font-size: 0.75rem;
+          padding-top: 5px;
+        }
+      }
+    }
+    .header-counter-text {
+      margin-top: 16px;
+      font-weight: 700;
+      font-size: 0.75rem;
+      .header-counter-text-date {
+        color: #7a50bf;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1420px){
+    .header-counter {
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+  }

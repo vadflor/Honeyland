@@ -1,0 +1,22 @@
+.pink-line {
+  max-width: 910px;
+  width: -webkit-fill-available;
+  margin: 83px auto;
+  background: linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 4px)
+      calc(100% - 4px) no-repeat,
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      #7a50bf 50%,
+      rgba(72, 171, 224, 0) 96%
+    );
+  border-radius: 0px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+  .pink-line {
+    display: none;
+  }
+}
